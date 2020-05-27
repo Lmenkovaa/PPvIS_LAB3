@@ -17,7 +17,7 @@ public class StartFunctionBListener extends FunctionListener {
     private JScrollPane scrollPaneForTable;
     private JTable tableForFunctionBInformation;
     private JPanel tablePanelForInformationFuncB;
-    private Thread threadForFunctionB = new Thread();
+    private Thread threadForFunctionB;
 
     public StartFunctionBListener(JFrame mainFrame, JSplitPane splitPaneTableFunction, GraphicDrawController controller, InformationPanel informationPanel) {
         super(mainFrame, splitPaneTableFunction, controller, informationPanel);
@@ -62,7 +62,6 @@ public class StartFunctionBListener extends FunctionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        super.actionPerformed(e);
         if (splitPane.getLeftComponent() != null) {
             tablePanelForInformationFuncB.remove(scrollPaneForTable);
         }

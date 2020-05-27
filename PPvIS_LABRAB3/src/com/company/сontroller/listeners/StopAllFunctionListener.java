@@ -2,13 +2,13 @@ package com.company.сontroller.listeners;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
+import java.util.List;
 
 public class StopAllFunctionListener implements ActionListener {
 
-    ArrayList<IStoppable> listForStop;
+    List<IStoppable> listForStop;
 
-    public StopAllFunctionListener(ArrayList<IStoppable> listForListeners) {
+    public StopAllFunctionListener(List<IStoppable> listForListeners) {
         this.listForStop = listForListeners;
     }
 

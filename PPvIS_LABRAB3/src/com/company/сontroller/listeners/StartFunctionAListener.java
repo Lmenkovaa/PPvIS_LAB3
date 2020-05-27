@@ -9,8 +9,8 @@ import java.awt.event.ActionEvent;
 
 public class StartFunctionAListener extends FunctionListener {
 
-    Thread threadForFunctionA = new Thread();
-    JPanel functionAPanel;
+    protected JPanel functionAPanel;
+    private Thread threadForFunctionA;
 
     public StartFunctionAListener(JFrame mainFrame, JSplitPane splitPaneTableFunction, GraphicDrawController controller, InformationPanel informationPanel) {
         super(mainFrame, splitPaneTableFunction, controller, informationPanel);
@@ -30,7 +30,6 @@ public class StartFunctionAListener extends FunctionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        super.actionPerformed(e);
         if (informationPanel.getTextFieldForXMaxFunctionA().getText() != null
                 && informationPanel.getTextFieldForXMinFunctionA().getText() != null) {
             try {

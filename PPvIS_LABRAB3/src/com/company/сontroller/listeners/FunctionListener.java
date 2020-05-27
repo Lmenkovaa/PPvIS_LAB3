@@ -7,11 +7,11 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class FunctionListener implements ActionListener, IStoppable {
-    JFrame frame;
-    JSplitPane splitPane;
-    GraphicDrawController graphicDrawController;
-    InformationPanel informationPanel;
+public abstract class FunctionListener implements ActionListener, IStoppable {
+    protected JFrame frame;
+    protected JSplitPane splitPane;
+    protected GraphicDrawController graphicDrawController;
+    protected InformationPanel informationPanel;
 
     public FunctionListener(JFrame mainFrame, JSplitPane splitPaneTableFunction, GraphicDrawController controller, InformationPanel informationPanel) {
         this.frame = mainFrame;
@@ -20,10 +20,8 @@ public class FunctionListener implements ActionListener, IStoppable {
         this.informationPanel = informationPanel;
     }
 
-    public void stop() {
-    }
+    public abstract void stop();
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-    }
+    public abstract void actionPerformed(ActionEvent e);
 }
