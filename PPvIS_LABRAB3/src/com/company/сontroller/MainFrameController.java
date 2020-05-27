@@ -8,6 +8,7 @@ import com.company.сontroller.listeners.StopAllFunctionListener;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainFrameController {
@@ -22,7 +23,7 @@ public class MainFrameController {
         JPanel panel;
         panel = informationPanel.createInformationPanel();
 
-        ArrayList<IStoppable> listForListeners = new ArrayList<>();
+        List<IStoppable> listForListeners = new ArrayList<>();
 
         StartFunctionAListener startFunctionAListener = new StartFunctionAListener(frame, splitPane, graphicDrawController, informationPanel);
         StartFunctionBListener startFunctionBListener = new StartFunctionBListener(frame, splitPane, graphicDrawController, informationPanel);
