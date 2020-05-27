@@ -1,6 +1,6 @@
 package com.company;
 
-import com.company.View.MainFrame;
+import com.company.view.MainFrame;
 
 public class Main {
 
